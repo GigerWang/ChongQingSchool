@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		img{width:800px;height:450px;margin:0 auto;}
+		.img { display:block; position: relative; width:800px; height:450px; margin:0 auto;}
+		.img:before{ content: ""; position: absolute; width:200px; height: 100%; top: 0; left: -150px; overflow: hidden;
+		 
+		background: -moz-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+		
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,.2)), color-stop(100%, rgba(255,255,255,0)));
+		 
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+		 
+		background: -o-linear-gradient(left, rgba(255,255,255,0)0, rgba(255,255,255,.2)50%, rgba(255,255,255,0)100%);
+		 
+		-webkit-transform: skewX(-25deg);
+		-moz-transform: skewX(-25deg)
+		 
+		}
+		.img:hover:before { left: 150%; transition: left 1s ease 0s; }
+		body{
+			font-family: "Microsoft YaHei";
+		}
+ </style>
+</head>
+<body>
+<div id=L1   
+style="Z-INDEX: 100; right:30px; WIDTH: 75px; POSITION: absolute; TOP: 1000px; HEIGHT: 75px">  
+<a href="javascript:toClientPlantInfo();" mce_href="javascript:toClientPlantInfo();">  
+<%String languages=WebUtils.getLocale().getLanguage();  
+  if (!"en".equals(languages)) { %>    
+    <img src="<%= request.getContextPath()%>/images/piaochuangO2.jpg" border="0"    style="cursor:pointer;"/>  
+    <%} %>  
+    </a></div>  
+<div id=L2   
+style="Z-INDEX: 100; left:0px; WIDTH: 60px; POSITION: absolute; TOP: 1000px; HEIGHT: 75px;display:block;">  
+<a href="http://www.online-information.asia/onlineasia2011/exhibitor_details.html?exhibitor_id=25553" mce_href="http://www.online-information.asia/onlineasia2011/exhibitor_details.html?exhibitor_id=25553" target="blank">  
+    <img src="<%= request.getContextPath()%>/images/online information AD TO WEB-05.jpg" border="0" style="cursor:pointer; width:200px;height:418"/>  
+    <input type="button" value="关闭" onclick="javascript:HiddenLayer();">  
+</a></div>  
+<SCRIPT LANGUAGE="JavaScript">  
+function moveit() //这个函数用于设置层在浏览器中的位置  
+{  
+L1.style.top=((document.body.offsetHeight-parseFloat (L1.style.height))/9)+document.body.scrollTop;  
+L2.style.top=((document.body.offsetHeight-parseFloat (L2.style.height))/9)+document.body.scrollTop;  
+}  
+window.onload=moveit; //网面打开时时执行moveit()  
+window.onresize=moveit; //当调整浏览器大小时执行moveit()  
+window.onscroll=moveit; //当拉动滚动条时执行moveit()  
+function HiddenLayer()  
+{  
+    L2.style.display = "none";  
+}  
+</SCRIPT>  
+</body>
+</html>
