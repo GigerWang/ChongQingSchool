@@ -6,24 +6,44 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Document</title>
 	<style type="text/css">
-		.div1{
-			overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    width: 600px;
-    height: 500px;
-		}
-	</style>
+.box{ 
+  width:300px;
+  height:200px;
+  position:relative;
+  background:red;
+  cursor:pointer;
+ }
+.box .bmbox{ 
+  width:300px; 
+  height:30px; 
+  background:black; 
+  position:absolute; 
+  bottom:0px; 
+  left:0px; 
+  display:none;
+  font:12px/30px "宋体"; color:white;
+  text-align:center;
+ }
+.box:hover .bmbox{
+  width:300px; 
+  height:30px; 
+  background:black; 
+  position:absolute; 
+  bottom:0px; 
+  left:0px; 
+  display:block;
+  font:12px/30px "宋体"; color:white;
+  text-align:center;
+ }
+</style>
 </head>
 <body>
-	<div class="div1">
-	 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好
-	  你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好
-	   你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好
-	    你好 你好 你好 你好 你好 你好 你好 你好
-	     你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好 你好
-	</div>
+ <div class="box">
+  <div class="bmbox">文字</div>
+ </div>
 </body>
 </html>
+
+
+
+ 

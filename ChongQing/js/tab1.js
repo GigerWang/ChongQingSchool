@@ -12,7 +12,9 @@ $(document).ready(function(){
 		$('.situation_tab').children('div').css('display','none');
 		$('.situation_tab').children('div').eq($(this).index()).fadeIn(500);
 	});
-	$('.situation_show').each(function(i,el){
-	
+	/*tab选项卡第二个*/
+	$('.news_tab').children('div').click(function() {
+		$('.news_show').children('div').css('display', 'none');
+		$('.news_show').children('div').eq($(this).index()).fadeIn(500);
 	})
 })
